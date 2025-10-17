@@ -17,11 +17,11 @@ pipeline {
         stage('Deploy Frontend to Tomcat') {
             steps {
                 bat '''
-                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactjenkins" (
-                    rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactjenkins"
+                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactjenkin" (
+                    rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactjenkin"
                 )
-                mkdir "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactjenkins"
-                xcopy /E /I /Y reactfrontend\\dist\\* "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactjenkins"
+                mkdir "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactjenkin"
+                xcopy /E /I /Y reactfrontend\\dist\\* "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactjenkin"
                 '''
             }
         }
